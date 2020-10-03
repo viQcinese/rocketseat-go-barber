@@ -3,12 +3,14 @@ import React, { ButtonHTMLAttributes } from 'react';
 import { Container } from './styles';
 
 // Equivalente a uma Interface vazia
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  loading?: boolean;
+};
 
-const Input: React.FC<ButtonProps> = ({ children, ...rest }) => {
+const Input: React.FC<ButtonProps> = ({ children, loading, ...rest }) => {
   return (
     <Container type="button" {...rest}>
-      {children}
+      {loading ? 'Carregando...' : children}
     </Container>
   );
 };
