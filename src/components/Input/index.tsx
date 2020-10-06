@@ -64,6 +64,7 @@ const Input: React.FC<InputProps> = ({
       isErrored={!!error}
       isFilled={isFilled}
       isFocused={isFocused}
+      data-testid="input-container"
     >
       {/* Precisa converter o nome de todos componentes React para o React entender que é um componente */}
       {Icon && <Icon size={20} />}
