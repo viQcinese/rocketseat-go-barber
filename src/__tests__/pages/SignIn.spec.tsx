@@ -1,10 +1,10 @@
-import React from 'react';
-import { render, fireEvent, wait } from '@testing-library/react';
-import SignIn from '../../pages/SignIn';
+import React from 'react'
+import { render, fireEvent, wait } from '@testing-library/react'
+import SignIn from '../../pages/SignIn'
 
-const mockedHistoryPush = jest.fn();
+const mockedHistoryPush = jest.fn()
 const mockedSignIn = jest.fn()
-const mockedAddToast = jest.fn();
+const mockedAddToast = jest.fn()
 
 jest.mock('react-router-dom', () => {
   return {

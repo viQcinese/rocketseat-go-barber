@@ -55,6 +55,7 @@ const SignUp: React.FC = () => {
         });
 
         history.push('/');
+
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
@@ -91,7 +92,7 @@ const SignUp: React.FC = () => {
               name="password"
               icon={FiLock}
               type="password"
-              placeholder="Senha"
+              placeholder="senha"
             />
 
             <Button type="submit">Cadastrar</Button>
